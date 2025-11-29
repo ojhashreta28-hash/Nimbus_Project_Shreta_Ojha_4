@@ -5,7 +5,7 @@ Nimbus_Project_Shreta_Ojha_4 is a simple hospital / patient-management and billi
 
 This project is intended as a console-based CLI program for managing patients and billing in a small clinic/hospital setup.
 
-Features  
+Features
 
 - Add new patient records (name, age, medical history, contact, etc.)  
 - Display all patient records  
