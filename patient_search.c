@@ -1,5 +1,5 @@
-# include <string.h>
-# include "patient.h"
+#include <string.h>
+#include "patient.h"
 
 int searchPatientByID(int id){
     for(int i=0; i<patient_count; ++i)if(patients[i].id==id) return i;

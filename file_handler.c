@@ -17,7 +17,7 @@ int loadFromFile(const char*filename){
     FILE *f=fopen(filename,"rb");
     if(!f)return-1;
     int cnt=0;
-    if(fread&cnt,sizeof(int),1,f)!=1){fclose(f);return-1;}
+    if(fread(&cnt,sizeof(int),1,f)!=1){fclose(f);return-1;}
     if(cnt<0||cnt>MAX_PATIENTS){fclose(f);return-1;}
     if(cnt>0){
         if(fread(patients,sizeof(Patient),cnt,f)!=(size_t)cnt){
@@ -25,5 +25,5 @@ int loadFromFile(const char*filename){
         }
         patient_count=cnt;
         fclose(f);
-        return 0;
-    }
+       return 0;
+}

@@ -60,7 +60,7 @@ int main(){
                 char name[NAME_LEN];
                 printf("Enter name:");
                 fgets(name,NAME_LEN,stdin);
-                name[strcpn(name,"\n")]='\0';
+                name[strcspn(name,"\n")]='\0';
                 int idx=searchPatientByName(name);
                 if(idx>=0){
                     printf("Patient found at index%d.\n",idx);

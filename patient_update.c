@@ -1,6 +1,7 @@
-# include <stdio.h>
-# include <string.h>
-# include "patient.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "patient.h"
 
 void updatePatient(int index){
     if(index<0 || index>=patient_count){printf("invalid index.\n");return;}
@@ -28,7 +29,7 @@ void updatePatient(int index){
     printf("Current doctor:%s\nNew doctor:",p->doctor);
     fgets(buffer,sizeof(buffer),stdin);
     
-    if(buffer[0]!='\n'){buffer[strcpn(buffer,"\n")]='\0';strncpy(p->doctor,buffer,DOCTOR_LEN);}
+    if(buffer[0]!='\n'){buffer[strcspn(buffer,"\n")]='\0';strncpy(p->doctor,buffer,DOCTOR_LEN);}
 
     printf("Current severity:%d\nNew severity(1-5,0 to keep):",p->severity);
     if(fgets(buffer,sizeof(buffer),stdin)){
@@ -36,7 +37,7 @@ void updatePatient(int index){
         int s=atoi(buffer);
         if(s>=1 && s<=5){
             p->severity=s;
-            p->treatent_cost=calculateTreatmentCost(s);
+            p->treatment_cost=calculateTreatmentCost(s);
 
         }
        
