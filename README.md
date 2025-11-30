@@ -14,4 +14,7 @@ Features
 - Basic billing functionality  
 - File-based storage (data persists between runs)  
 
+EXAMPLE:-
+ALL(1-8) CHOICES:-
+<img width="657" height="303" alt="Screenshot 2025-11-30 074611" src="https://github.com/user-attachments/assets/9eb26cbc-4d3a-40fc-a554-85d717d0a6ab" />
 
